@@ -1,7 +1,7 @@
 import Onboard from '@bn-onboard/core'
 import injectedModule from '@bn-onboard/injected-wallets'
 
-const MAINNET_RPC_URL = 'https://api.s0.b.hmny.io'
+const MAINNET_RPC_URL = 'https://mainnet.infura.io/v3/<INFURA_KEY>'
 
 const injected = injectedModule()
 
@@ -9,9 +9,9 @@ export const onboard = Onboard({
   wallets: [injected],
   chains: [
     {
-      id: '1666700000',
-      token: 'ONE',
-      label: 'Harmony Testnet',
+      id: '0x1',
+      token: 'ETH',
+      label: 'Ethereum Mainnet',
       rpcUrl: MAINNET_RPC_URL
     }
   ],
