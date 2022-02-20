@@ -16,14 +16,14 @@
     )
 
     if (isApproved) {
-      $currentView$ = VIEWS.TOKENS
+      $currentView$ = VIEWS.HOME
     }
   })
 
   const approve = async () => {
     const res = await $stakingContract$.setApprovalForAll(SEMAPHORE_STAKING_CONTRACT_ADDRESS, true)
     if (res) {
-      $currentView$ = VIEWS.TOKENS
+      $currentView$ = VIEWS.HOME
     }
   }
 </script>

@@ -1,7 +1,7 @@
 <script>
-  import { tokens$, zkStakeContract$, identity$ } from '../state'
+  import { tokens$, zkStakeContract$, identity$, currentView$ } from '../state'
 
-  import { ENTITY_ID } from '../constants'
+  import { ENTITY_ID, VIEWS } from '../constants'
 
   let selectedToken
 
@@ -14,6 +14,10 @@
     setTimeout(() => {
       saveButtonText = 'Stake'
     }, 1000)
+  }
+
+  const back = () => {
+    $currentView$ = VIEWS.HOME
   }
 </script>
 
@@ -35,9 +39,15 @@
     {/if}
   </div>
 
-  <button
-    class="mt-14 px-4 py-2 w-1/2 bg-accent rounded-md text-white disabled:opacity-50"
-    disabled={!selectedToken}
-    on:click={stake}>{@html saveButtonText}</button
-  >
+  <div class="flex mt-10 items-center">
+    <button
+      class=" mr-4 px-4 py-2 w-1/2 bg-white border border-neutral-600 rounded-md text-black"
+      on:click={back}>Back</button
+    >
+    <button
+      class="px-4 py-2 w-1/2 bg-accent rounded-md text-white disabled:opacity-50"
+      disabled={!selectedToken}
+      on:click={stake}>{@html saveButtonText}</button
+    >
+  </div>
 </div>

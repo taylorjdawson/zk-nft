@@ -3,7 +3,8 @@ export const VIEWS = {
   APPROVE: 1,
   MINT: 2,
   REGISTER: 3,
-  TOKENS: 4,
+  STAKE: 4,
+  VERIFY: 5
 }
 
 export const STAKING_CONTRACT_ADDRESS = '0xAbd8A23eb103cfB15221cbE910869859BBff1AD3'

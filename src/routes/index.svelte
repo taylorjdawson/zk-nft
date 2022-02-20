@@ -15,7 +15,9 @@
   import Connect, { title as connectTitle } from '../views/Connect.svelte'
   import Approve, { title as approveTitle } from '../views/Approve.svelte'
   import Mint, { title as mintTitle } from '../views/Mint.svelte'
-  import Tokens from '../views/Tokens.svelte'
+  import Stake from '../views/Stake.svelte'
+  import Verify from '../views/Verify.svelte'
+  import Home from '../views/Home.svelte'
   import Register, { title as registerTitle } from '../views/Register.svelte'
   import Wallet from '../components/Wallet.svelte'
 
@@ -37,7 +39,9 @@
     [VIEWS.CONNECT]: { component: Connect, title: connectTitle },
     [VIEWS.MINT]: { component: Mint, title: mintTitle },
     [VIEWS.REGISTER]: { component: Register, title: registerTitle },
-    [VIEWS.TOKENS]: { component: Tokens, title: 'Home' }
+    [VIEWS.STAKE]: { component: Stake, title: 'Tokens' },
+    [VIEWS.HOME]: { component: Home, title: 'Home' },
+    [VIEWS.VERIFY]: { component: Verify, title: 'Verify' }
   }[$currentView$]
 
   let wallet

@@ -55,14 +55,16 @@ export const tokens$ = derived([stakingContract$, account$], ([stakingContract, 
   })
 })
 
-export const identity$  = writable()
+export const identity$ = writable()
 
 // ---------------- DEBUG ONLY -----------------
-const viewToName = {
+export const viewToName = {
   [VIEWS.CONNECT]: 'CONNECT',
   [VIEWS.APPROVE]: 'APPROVE',
-  [VIEWS.MINT]: 'MINT',
-  [VIEWS.REGISTER]: 'REGISTER'
+  [VIEWS.MINT]: 'Mint',
+  [VIEWS.REGISTER]: 'REGISTER',
+  [VIEWS.STAKE]: 'Stake',
+  [VIEWS.VERIFY]: 'Verify'
 }
 
 currentView$.subscribe((currentView) => {

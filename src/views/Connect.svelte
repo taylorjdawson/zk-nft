@@ -3,11 +3,14 @@
 </script>
 
 <script>
+  import { VIEWS } from '../constants'
+
   import { onboard } from '../services'
-  import { wallets$ } from '../state'
+  import { currentView$, wallets$ } from '../state'
 
   const connectWallet = async () => {
     $wallets$ = await onboard.connectWallet()
+    $currentView$ = VIEWS.HOME
   }
 </script>
 
